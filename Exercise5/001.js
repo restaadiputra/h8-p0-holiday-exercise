@@ -1,6 +1,16 @@
 function soal1(objList,id,action)
 {
-    // your code here 
+    switch(action) {
+        case 'view':
+            return objList[id];
+            break;
+        case 'delete':
+            delete objList[id];
+            return objList;
+            break;
+        default:
+            break;
+    }
 }
 
 console.log(soal1({
