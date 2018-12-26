@@ -15,9 +15,7 @@
 */
 
 function addAllRecursive(arr) {
-    if(arr.length === 1){
-        return arr[0]
-    }
+    if(arr.length === 1){return arr[0]}
     return arr[0] + addAllRecursive(arr.slice(1));
 }
 
