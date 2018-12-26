@@ -3,10 +3,10 @@ function soal2(param)
     var arrayList = [];
     for (var i = 0; i < param.length; i++) {
         arrayList.push({
-            'firtName' : param[i][0],
-            'lastName' : param[i][1],
-            'hobbies' : param[i][2],
-            'profession':param[i][3]
+            firtName : param[i][0],
+            lastName : param[i][1],
+            hobbies : param[i][2],
+            profession :param[i][3]
         })
     }
     return arrayList;

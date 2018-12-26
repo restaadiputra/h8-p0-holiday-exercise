@@ -10,7 +10,23 @@
 */
 
 function generateBar(p,t) {
-    // your code here
+    if (p > 0 && t > 0 && p > t) {
+        for (var i = 0; i < t; i++) {
+            var line = '';
+            for (var j = 0; j < p; j++) {
+                if (i === 0 || i === t - 1) {
+                    line += 'o'
+                } else if (j === 0 || j === p - 1) {
+                    line += 'o'
+                } else {
+                    line += ' '
+                }
+            }
+            console.log(line)
+        }
+    } else {
+        return 'invalid value'
+    }
 }
 
 generateBar(4,3)//

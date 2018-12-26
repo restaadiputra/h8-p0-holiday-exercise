@@ -30,7 +30,7 @@ console.log(soal2(5))
   ]
 */
 
-//console.log(soal2(3))
+console.log(soal2(3))
 /*
   [
       ['','*',''],

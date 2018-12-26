@@ -3,7 +3,7 @@
 
     Jawaban pseudocode disini 
     FUNCTION "soal2" with parameter "param"
-        IF param EQUAL to 0 then
+        IF "param" EQUAL to 0 then
             return 'invalid input'
         ELSE then
             CREATE "arrayList" as an empty array
@@ -22,7 +22,7 @@
                     "j" add by 1
                 END FOR
 
-                PUSH "arrayItem" into arrayList
+                PUSH "arrayItem" into "arrayList"
                 
                 "i" add by 1
             END FOR

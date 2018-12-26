@@ -1,26 +1,3 @@
-// without sort
-function soal3(param)
-{
-    var data = {};
-    for(var i = 0; i < param.length; i++) {
-        // if the first letter of param index of i is not exists
-        if (!(param[i][0] in data)) {
-            // add first letter of param index of i as key 
-            // and param index of i as first value
-
-            data[param[i][0]] = [param[i]];
-        }
-        else {
-            // push value to existing key based on the firs letter
-            data[param[i][0]].push([param[i]]);
-        }
-    }
-    
-    return data;
-}
-
-// with sort
-
 function soal3(param)
 {
     var data = {};
@@ -28,12 +5,13 @@ function soal3(param)
 
     // add each param first letter into an array list
     for (var i = 0; i < param.length; i++) {   
-        if (arrList.indexOf(param[i][0])) {
-        arrList.push(param[i][0])
-      } 
+        if (arrList.indexOf(param[i][0]) === -1) {
+            arrList.push(param[i][0])
+        } 
     }
 
     arrList = arrList.sort(); // sort the array list
+    
     // create a key with empty array as value into data
     // from an array list
     for (var i = 0; i < arrList.length; i++) {

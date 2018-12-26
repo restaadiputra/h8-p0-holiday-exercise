@@ -1,6 +1,20 @@
 function soal3(param1)
 {
-    // your code here 
+    var start = 1;
+    var arrayList = [];
+    for (var i = 0; i < param1; i++) {
+        var arrayItem = [];
+        for (var j = 0; j < param1; j++) {
+            if(i % 2 === 0) {
+                arrayItem.push(start)
+            } else {
+                arrayItem.unshift(start);
+            }
+            start++;
+        }
+        arrayList.push(arrayItem);
+    }
+    return arrayList;
 }
 
 console.log(soal3(3))

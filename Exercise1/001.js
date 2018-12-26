@@ -26,7 +26,7 @@ function soal1(param)
 
 /* OR */
 
-function soal1(param)
+function alt_soal1(param)
 {   
   if (param > 0) {
     var arrayList = [];

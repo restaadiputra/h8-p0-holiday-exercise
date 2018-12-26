@@ -20,7 +20,7 @@
     xoox
     ooxo
     oxoo
-    xoox
+    
 
     generateBarXO(6,4)
     output: 
@@ -32,7 +32,17 @@
 */
 
 function generateBarXO(p,t) {
-    // your code here 
+    var orderStr = 'xoo';
+    var start = 0;
+
+    for(var i = 0; i < t; i ++) {
+        var line = '';
+        for(var j = 0; j < p; j++) {
+            line += orderStr[start % orderStr.length]
+            start++;
+        }
+        console.log(line);
+    }
 }
 
 generateBarXO(4,3)
@@ -40,7 +50,6 @@ generateBarXO(4,3)
 xoox
 ooxo
 oxoo
-xoox
 */
 
 generateBarXO(6,4)

@@ -1,6 +1,14 @@
 function rocket(param)
 {
-    // your code here
+    var arrayList = [];
+    for (var i = 0; i < param; i++) {
+        var arrayItem = [];
+        for (var j = 0; j < param; j++) {
+            arrayItem.push([i,j])
+        }
+        arrayList.push(arrayItem);
+    }
+    return arrayList;
 }
 
 console.log(rocket(3))
