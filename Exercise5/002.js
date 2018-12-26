@@ -5,8 +5,7 @@ function soal2(param)
         for (var i = 0; i < param / 2; i++) {
             var arrayItem = []
             for (var j = 0; j < param; j++) {
-                if ( j <= (param - 1) / 2 + i && 
-                j >= (param - 1) / 2 - i ) {
+                if ( j <= (param - 1) / 2 + i && j >= (param - 1) / 2 - i ) {
                     arrayItem.push('*')
                 } else {
                     arrayItem.push('')
