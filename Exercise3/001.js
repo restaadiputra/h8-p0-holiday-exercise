@@ -1,14 +1,6 @@
-function soal1(param)
-{
-    var newString = '';
-    for(var i = param.length - 1; i >= 0; i--) {
-        newString += param[i];
-
-        if (i > 0) {
-            newString += '\n';
-        }
-    }
-    return newString;
+function soal1(param) {
+    if(param.length === 1) {return param}
+    return soal1(param.substr(1)) + '\n' + param[0]
 }
 
 console.log(soal1("Aries Dimas Yudhistira"));
