@@ -2,10 +2,7 @@
 
 function soal3(param1, param2)
 {
-    if (param2 === 1) {
-        return param1
-    } 
-
+    if (param2 === 1) {return param1} 
     return param1 * soal3(param1, (param2 - 1))
 }
 
