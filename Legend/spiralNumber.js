@@ -20,53 +20,61 @@ function spiralNumber(param)
     // move right and left : 0 <= x < param
     // move down and up    : 0 <= y < param
     // arrayList[y][x] must be empty, in this case I set with zero as empty
-    // if rule broken, go to next cycle
+    // if rule broken, go to next cycle of movement
 
     for(var i = 0; i < param * param; i++) {
-        if(move === 'right') {
-            if (x >= 0 && x < param && arrayList[y][x] === 0) {
-                arrayList[y][x] = i + 1;
-                x++;
-            } else {
-                x--; // back to previous x
-                y++; // switch y
-                move = 'down';
-                arrayList[y][x] = i + 1;
-                y++
-            }
-        } else if(move === 'down') {
-            if (y >= 0 && y < param && arrayList[y][x] === 0) {
-                arrayList[y][x] = i + 1;
-                y++;
-            } else {
-                y--; // back to previous y
-                x--; // switch x
-                move = 'left';
-                arrayList[y][x] = i + 1;
-                x--;
-            }
-        } else if(move === 'left') {
-            if (x >= 0 && x < param && arrayList[y][x] === 0) {
-                arrayList[y][x] = i + 1;
-                x--;
-            } else {
-                x++; // back to previous x
-                y--; // switch y
-                move = 'up';
-                arrayList[y][x] = i + 1;
-                y--;
-            }
-        } else if(move === 'up') {
-            if (y >= 0 && y < param && arrayList[y][x] === 0) {
-                arrayList[y][x] = i + 1;
-                y--;
-            } else {
-                y++; // back to previous y 
-                x++; // switch x
-                move = 'right';
-                arrayList[y][x] = i + 1;
-                x++
-            }
+        switch(move) {
+            case 'right':
+                if (x >= 0 && x < param && arrayList[y][x] === 0) {
+                    arrayList[y][x] = i + 1;
+                    x++;
+                } else {
+                    x--; // back to previous x
+                    y++; // switch y
+                    move = 'down';
+                    arrayList[y][x] = i + 1;
+                    y++
+                }
+                break;
+            case 'down' :
+                if (y >= 0 && y < param && arrayList[y][x] === 0) {
+                    arrayList[y][x] = i + 1;
+                    y++;
+                } else {
+                    y--; // back to previous y
+                    x--; // switch x
+                    move = 'left';
+                    arrayList[y][x] = i + 1;
+                    x--;
+                }
+                break;
+            case 'left' :
+                if (x >= 0 && x < param && arrayList[y][x] === 0) {
+                    arrayList[y][x] = i + 1;
+                    x--;
+                } else {
+                    x++; // back to previous x
+                    y--; // switch y
+                    move = 'up';
+                    arrayList[y][x] = i + 1;
+                    y--;
+                }
+                break;
+            case 'up' :
+                if (y >= 0 && y < param && arrayList[y][x] === 0) {
+                    arrayList[y][x] = i + 1;
+                    y--;
+                } else {
+                    y++; // back to previous y 
+                    x++; // switch x
+                    move = 'right';
+                    arrayList[y][x] = i + 1;
+                    x++
+                }
+                break;
+            default :
+                break;
+
         }
     }
     return arrayList

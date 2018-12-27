@@ -6,7 +6,7 @@ function soal1(objList,id,action)
             return objList[id];
             break;
         case 'delete':
-            // switch the of next keys:values pair to previos
+            // switch the of next keys:values pair to previous
             // e.g. if obj has 4 keys and key no 1 is deleted then 
             //      key 2 copied to key 1
             //      key 3 copied to key 2
