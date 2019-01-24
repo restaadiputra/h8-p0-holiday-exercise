@@ -21,18 +21,15 @@
 */
 
 function palindromeRecursive(str) {
-    // if str is 0 or 1 letter length remaining
-    if (str.length === 0 || str.length === 1) {
-        return true;
+    if(str <= 1) {
+        return true
+    }
+
+    if(str[0] !== str[str.length - 1]) {
+        return false
     }
     
-    // if first and last letter same, call fanction again with removed 
-    // first and last str
-    if (str[0] === str[str.length - 1]) {
-        return palindromeRecursive( str.slice(1, str.length - 1) );
-    }
-    
-    return false; // return false if once the letter is not same
+    return palindromeRecursive(str.slice(1, str.length-1)); 
 }
 
 console.log(palindromeRecursive("kasur ini rusak")) // true 
